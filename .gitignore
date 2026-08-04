@@ -1,0 +1,10 @@
+cd ML_Project_fixed
+
+cat > .gitignore << 'EOF'
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+EOF

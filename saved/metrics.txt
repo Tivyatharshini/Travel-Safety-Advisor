@@ -1,0 +1,30 @@
+Held-out test set (20% of data, stratified split)
+
+              precision    recall  f1-score   support
+
+      unsafe       1.00      1.00      1.00       363
+        safe       1.00      1.00      1.00      1434
+
+    accuracy                           1.00      1797
+   macro avg       1.00      1.00      1.00      1797
+weighted avg       1.00      1.00      1.00      1797
+
+Accuracy: 1.000
+ROC-AUC: 1.000
+
+Top feature importances:
+pressure_problem    0.252749
+asthma              0.197915
+skin_disease        0.178440
+preci               0.101705
+Temp                0.059850
+LAI                 0.055478
+low_bp              0.047301
+sunburn_risk        0.034094
+dehydration         0.015454
+week_of_outbreak    0.015223
+mon                 0.012448
+Latitude            0.006064
+Longitude           0.005395
+heat_stroke         0.004671
+paralysis_risk      0.002733
