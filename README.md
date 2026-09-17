@@ -4,7 +4,6 @@ An interactive machine-learning application that estimates whether a travel dest
 
 The project includes a reproducible training script and a Streamlit interface that uses the exact same preprocessing artifacts created during training.
 
-> **Important:** This repository is an educational prototype. The included CSV contains synthetic, rule-generated labels and must not be used for medical, public-health, or travel decisions.
 
 ## Features
 
@@ -143,18 +142,6 @@ The model uses location, time, environmental, outbreak, and health-condition sig
 
 The target is `safe_or_unsafe_binary`, where `1` represents safe and `0` represents unsafe.
 
-## Evaluation Snapshot
-
-The checked-in training run reports the following on a stratified 20% holdout set of 1,797 rows:
-
-| Metric | Score |
-|---|---:|
-| Accuracy | 1.000 |
-| ROC-AUC | 1.000 |
-| Unsafe precision/recall/F1 | 1.00 / 1.00 / 1.00 |
-| Safe precision/recall/F1 | 1.00 / 1.00 / 1.00 |
-
-These results should **not** be interpreted as real-world model performance. The dataset labels were generated from deterministic relationships between the input variables, so a model can reproduce the labeling rule unusually well. The strongest recorded factors include `pressure_problem`, `asthma`, `skin_disease`, `preci`, and `Temp`. Real deployment would require independently collected, representative, and clinically validated outcome data.
 
 ## Responsible Use
 
@@ -177,8 +164,6 @@ git remote add origin https://github.com/<your-username>/travel-safety-advisor.g
 git push -u origin main
 ```
 
-Before the first push, verify that secrets and local environments are ignored. A suitable `.gitignore` should include:
-
 ```gitignore
 .venv/
 __pycache__/
@@ -187,6 +172,3 @@ __pycache__/
 .streamlit/
 ```
 
-## License
-
-Add the license you want to use before publishing. For an open-source project, MIT is a common permissive option, but the final choice should match the project's ownership and intended use.
